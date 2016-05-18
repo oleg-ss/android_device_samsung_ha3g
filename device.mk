@@ -161,6 +161,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstlport
 
+# adb has root
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    persist.adb.notify=0 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1
+
 # IR
 PRODUCT_PACKAGES += \
     consumerir.universal5420
